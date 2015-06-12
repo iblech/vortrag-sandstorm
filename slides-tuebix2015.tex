@@ -1,0 +1,120 @@
+\documentclass[12pt,compress,ngerman,utf8,t]{beamer}
+\usepackage[ngerman]{babel}
+\usepackage[export]{adjustbox}
+\usepackage{multicol}
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+
+\title{Sandstorm, eine offene Plattform für private Server}
+\author[Ingo Blechschmidt]{
+  \hspace*{-12.05em}\includegraphics[scale=0.15]{images/sandstorm} \\[0.8em]
+  Ingo Blechschmidt}
+\date{Tübinger Linuxtag am 13. Juni 2015}
+
+\usetheme{Warsaw}
+
+\useinnertheme{rectangles}
+
+\usecolortheme{seahorse}
+\definecolor{mypurple}{RGB}{150,0,255}
+\setbeamercolor{structure}{fg=mypurple}
+
+\usefonttheme{serif}
+\usepackage{bookman}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{frametitle}[default][colsep=-2bp,rounded=false,shadow=false,center]
+
+\renewcommand*\insertshorttitle{Tübinger Linuxtag 2015}
+
+\newcommand{\hil}[1]{{\usebeamercolor[fg]{item}{\textbf{#1}}}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}\frametitle{Die vier wesentlichen Freiheiten}
+  \begin{center}
+    \includegraphics[scale=0.3]{images/gnu}
+  \end{center}
+
+  Software ist \hil{frei}, wenn man \ldots
+  \medskip
+
+  \begin{enumerate}
+    \addtocounter{enumi}{-1}
+    \item sie zu jedem Zweck ausführen,
+    \item sie untersuchen und verändern,
+    \item sie verbreiten und
+    \item Verbesserungen verbreiten darf.
+  \end{enumerate}
+\end{frame}
+
+% mündlich: Diese Freiheiten sind in Gefahr!
+% Denn zu Software, die auf Cloud-Servern liegt, haben wir keinen Zugang
+% (Facebook, Dropbox, ...).
+
+\begin{frame}\frametitle{Sandstorm für einfache private Server}
+  Mit Sandstorm ist es \hil{einfach}, sich eigene Cloud-Server einzurichten:
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item Etherpad
+      \item EtherCalc
+      \item WordPress
+      \item MediaWiki
+      \item GitLab
+      \item \ldots
+    \end{itemize}
+  \end{multicols}
+
+  \only<1>{
+    \bigskip
+    \centering
+    \includegraphics[scale=0.12,frame=0.2pt]{images/ethercalc}
+    \quad
+    \includegraphics[scale=0.12,frame=0.2pt]{images/mediawiki}
+    \par
+  }
+
+  \pause
+  \bigskip
+  \setbeamertemplate{itemize item}{$\varheart$}
+  Vorteile:
+  \medskip
+  \begin{itemize}
+    \item Schutz der Privatsphäre
+    \item Keine Abhängigkeit von Firmen
+    \item Unterstützung freier Server-Software
+  \end{itemize}
+
+  \pause
+  \begin{center}Ohne Anmeldung ausprobieren auf:
+  \hil{https:/\!/sandstorm.io/}\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{Audrey Tang}
+  \begin{center}
+    \includegraphics[scale=0.4]{images/audreyt}
+  \end{center}
+\end{frame}
+
+\begin{frame}\frametitle{Mathecamp in den Ferien \\[-0.4em] \scriptsize vom 22. bis 28. August 2015 in Violau}
+  \vspace{-0.4cm}
+  \begin{center}
+    \includegraphics[scale=0.2]{images/mathecamp-gregor}
+    \medskip
+
+    \includegraphics[scale=1.6]{images/mathecamp-foto}
+    \medskip
+
+    \vfill
+    \tiny
+    \href{http://www.math.uni-augsburg.de/schueler/mathezirkel/}{http:/\!/www.math.uni-augsburg.de/schueler/mathezirkel/}
+  \end{center}
+\end{frame}
+
+\end{document}
